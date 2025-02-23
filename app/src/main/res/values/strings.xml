@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dish Antenna Pointer</string>
+
+    <string-array name="direction_options">
+        <item>E</item>
+        <item>W</item>
+    </string-array>
+    <string-array name="measurement_options">
+        <item>Inches</item>
+        <item>Centimetre</item>
+    </string-array>
+</resources>

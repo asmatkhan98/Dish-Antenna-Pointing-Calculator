@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/MainPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+        
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/Panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp"
+            android:layout_marginBottom="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/TextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="4dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="Dish Focal Point Calculator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:padding="4dp"
+                    android:gravity="right"
+                    android:text="Measurement"
+                    android:layout_weight="1" />
+                <Spinner
+                    style="@style/GlowingEditText"
+                    android:id="@+id/measurementSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:spinnerMode="dropdown"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="1dp"
+                        android:gravity="center"
+                        android:text="Dish Diameter" />
+                    
+                    <EditText
+                        style="@style/GlowingEditText"
+                        android:id="@+id/diameterInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:paddingBottom="4dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:hint="Enter Dish Diameter"
+                        android:inputType="numberDecimal"
+                        android:text="51.5" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="1dp"
+                        android:gravity="center"
+                        android:text="Dish Depth" />
+                    
+                    <EditText
+                        style="@style/GlowingEditText"
+                        android:id="@+id/depthInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:paddingBottom="4dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:hint="Enter Dish Depth"
+                        android:inputType="numberDecimal"
+                        android:text="7.4" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                
+                <TextView
+                    style="@style/TextViewResult"
+                    android:id="@+id/focalResult"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:padding="4dp"
+                    android:gravity="center"
+                    android:text="Pocal Point 22.40"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/calculateDepthButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:textSize="14sp"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:text="Calculate" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/Panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp"
+            android:layout_marginBottom="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="4dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="Dish Antenna Pointing Calculator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:padding="4dp"
+                    android:gravity="right"
+                    android:text="Satellite Longitude"
+                    android:layout_weight="1.5" />
+
+                <EditText
+                    style="@style/GlowingEditText"
+                    android:id="@+id/satelliteInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:padding="4dp"
+                    android:hint="Enter Satellite Longitude"
+                    android:inputType="numberDecimal"
+                    android:text="38"
+                    android:layout_weight="1" />
+
+                <Spinner
+                    style="@style/GlowingEditText"
+                    android:id="@+id/directionSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:layout_weight=".5" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+            
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:gravity="right"
+                    android:text="Declination"
+                    android:layout_weight="1.5" />
+            
+                <EditText
+                    style="@style/GlowingEditText"
+                    android:id="@+id/declinationInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:hint="Enter Declination"
+                    android:inputType="numberDecimal"
+                    android:text="2.75"
+                    android:layout_weight="1.5" />
+            
+            </LinearLayout>
+                    
+        
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/getLocationButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:textSize="14sp"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:text="Get My Location" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1.5">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="1dp"
+                        android:gravity="center"
+                        android:text="Latitude" />
+
+                    <EditText
+                        style="@style/GlowingEditText"
+                        android:id="@+id/latitudeInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:paddingBottom="4dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:hint="Enter Latitude"
+                        android:inputType="numberDecimal"
+                        android:text="30.928000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1.5">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="1dp"
+                        android:gravity="center"
+                        android:text="Longitude" />
+
+                    <EditText
+                        style="@style/GlowingEditText"
+                        android:id="@+id/longitudeInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:paddingBottom="4dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:hint="Enter Longitude"
+                        android:inputType="numberDecimal"
+                        android:text="66.448000" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:paddingRight="4dp"
+                    android:gravity="right"
+                    android:text="Azimuth(true | magnet)\nElevation\nLNB Skew(anticlock)"
+                    android:layout_weight="1" />
+                <TextView
+                    style="@style/TextViewResult"
+                    android:id="@+id/resultText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:paddingLeft="4dp"
+                    android:text="226.51° | 223.76°\n42.56°\n38.49°"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/calculateButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:textSize="14sp"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:text="Calculate" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/Panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp"
+            android:gravity="center">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/TextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="4dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="Compass &amp; Elevation" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1" >
+                    <TextView
+                        style="@style/TextView"
+                        android:id="@+id/direction_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:textColor="#FEA000"
+                        android:gravity="right"
+                        android:layout_marginRight="1dp"
+                        android:text="Azimuth N 0.0°"/>
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1" >
+                    <TextView
+                        style="@style/TextView"
+                        android:id="@+id/pitch_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:gravity="left"
+                        android:textColor="#FEA000"
+                        android:layout_marginLeft="1dp"
+                        android:text="0° Elevation"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>    
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="0dp">
+
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@android:drawable/arrow_down_float"
+                android:tint="#003040"
+                android:padding="0dp" />
+
+
+        </LinearLayout>
+            
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="4dp">
+            
+            
+
+
+            <ImageView
+                android:id="@+id/compass_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/compass"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

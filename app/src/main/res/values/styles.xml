@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Custom MainBackGround Style -->
+    <style name="Background">
+        <item name="android:background">#FFFFFF</item>
+    </style>
+    
+    <!-- Custom Main Pannel Style -->
+    
+    <style name="MainPanel">
+        <item name="android:background">#586666</item>
+    </style>
+    
+    
+    <!-- Custom Panel Style -->
+    
+    <style name="Panel">
+        <item name="android:background">@drawable/glowing_border_dark</item>
+    </style>
+    
+    <!-- Custom TextViewTitle Style -->
+    <style name="TextViewTitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#C6DEE2</item>
+        <item name="android:shadowColor">#829B9F</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:background">#101010</item>
+        <!--
+        <item name="android:background">@drawable/glowing_border_dark</item>
+        -->
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <!-- Custom TextView Style -->
+    <style name="TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#586666</item>
+        <item name="android:shadowColor">#343F43</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">0</item>
+        <!--
+        <item name="android:background">@drawable/glowing_border_dark</item>
+        -->
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <!-- Custom TextView Style -->
+    <style name="TextViewResult">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#37B73C</item>
+        <item name="android:shadowColor">#207D22</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">0</item>
+        <!--
+        <item name="android:background">@drawable/glowing_border_dark</item>
+        -->
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <!-- Custom TextView Style -->
+    <style name="GlowingTextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#58676c</item>
+        <item name="android:shadowColor">#343F43</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">8</item>
+        <!--
+        <item name="android:background">@drawable/glowing_border_dark</item>
+        -->
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Custom EditText Style -->
+    <style name="GlowingEditText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#C6DEE2</item>
+        <item name="android:shadowColor">#829B9F</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">4</item>
+        <!--
+        <item name="android:background">@drawable/glowing_border_dark</item>
+        -->
+        <item name="android:background">#202020</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>
